@@ -1,7 +1,13 @@
+import sys
 import time
 import random
 import pygame
 pygame.init()
+
+headless = False
+if len(sys.argv) > 1:
+    if sys.argv[1] in ['-h', "--headless"]:
+        headless = True
 
 drums_bpm = 170
 phrase_length = 16
@@ -13,17 +19,19 @@ pad_channel = pygame.mixer.Channel(2)
 pygame.mixer.init(int(44100*(drums_bpm/137)))
 
 def main():
-    screen = pygame.display.set_mode((800,600))
-    pygame.display.set_caption("Definitely not a keygen")
+    if not headless:
+        screen = pygame.display.set_mode((800,600))
+        pygame.display.set_caption("Definitely not a keygen")
 
     running = True
     beat = 0
     while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-        
-        print(beat)
+        if not headless:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+            
+            print(beat)
         if beat == 0:
             pad_channel.play(synth_sound_list[random.randint(0,len(synth_sound_list)-1)])
 
