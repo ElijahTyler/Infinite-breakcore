@@ -12,3 +12,4 @@ does what it says on the can
 `python main.py`
 
 It's just randomly generated breakcore, what's not to love?
+Feel free to mess around with the config.json file, you can change a lot of attributes about the program.
