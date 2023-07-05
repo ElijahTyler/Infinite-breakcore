@@ -20,7 +20,7 @@ If you want to change the settings for the program, you can do so in the config.
 - **pattern_weight** - likelihood of playing a drum pattern as opposed to random notes; 0 <= pattern_weight <= 1
 - **drum_bank** - which folder to pull drum sounds from
 - **synth_bank** - which folder to pull synth sounds from
-- **warp_samples** - whether or not the drum samples get warped based on the bpm
+- **warp_samples** - whether or not the drum samples get warped based on the bpm specified in the drum folder's data.json file
 
 ## Run
 
