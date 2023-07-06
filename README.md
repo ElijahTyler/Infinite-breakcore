@@ -11,7 +11,7 @@ does what it says on the can
 
 If you want to change the settings for the program, you can do so in the config.json file. The attributes are as follows:
 
-- **bpm** - the tempo of the song
+- **bpm** - the tempo of the song (set this to 0 to use the drum sample tempo)
 - **synth_phrase_length** - how often a new synth note is played
 - **drum_phrase_length** - how often a new drum pattern is picked
 - **drum_patterns** - list of drum patterns, see default for example

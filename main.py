@@ -8,7 +8,6 @@ pygame.init()
 with open("config.json") as f:
     config = json.load(f)
 
-bpm = config["bpm"]
 synth_phrase_length = config["synth_phrase_length"]
 drum_phrase_length = config["drum_phrase_length"]
 drum_patterns = config["drum_patterns"]
@@ -16,11 +15,14 @@ repeat_patterns = config["repeat_patterns"]
 include_silence = config["include_silence"]
 pattern_weight = config["pattern_weight"]
 drum_bank = f'samples/drum/{config["drum_bank"]}'
+if not (bpm := config["bpm"]):
+    with open(f"{drum_bank}/data.json") as f:
+        bpm = json.load(f)["bpm"]
 synth_bank = f'samples/synth/{config["synth_bank"]}'
 if config["warp_samples"]:
     with open(f"{drum_bank}/data.json") as f:
         drum_bank_bpm = json.load(f)["bpm"]
-    pygame.mixer.init(int(44100*(bpm/drum_bank_bpm))) # this doesn't actually do anything quite yet
+    pygame.mixer.init(int(44100*(bpm/drum_bank_bpm))) # this doesn't actually work
 else:
     pygame.mixer.init(44100)
 
