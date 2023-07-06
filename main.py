@@ -5,8 +5,12 @@ import random
 import pygame
 pygame.init()
 
-with open("config.json") as f:
-    config = json.load(f)
+try:
+    with open("config.json") as f:
+        config = json.load(f)
+except:
+    print("No config.json file found. Please create one.")
+    exit()
 
 synth_phrase_length = config["synth_phrase_length"]
 drum_phrase_length = config["drum_phrase_length"]
