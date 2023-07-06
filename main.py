@@ -19,8 +19,8 @@ drum_bank = f'samples/drum/{config["drum_bank"]}'
 synth_bank = f'samples/synth/{config["synth_bank"]}'
 if config["warp_samples"]:
     with open(f"{drum_bank}/data.json") as f:
-        sample_bpm = json.load(f)["bpm"]
-    pygame.mixer.init(int(44100*(bpm/sample_bpm)))
+        drum_bank_bpm = json.load(f)["bpm"]
+    pygame.mixer.init(int(44100*(bpm/drum_bank_bpm))) # this doesn't actually do anything quite yet
 else:
     pygame.mixer.init(44100)
 

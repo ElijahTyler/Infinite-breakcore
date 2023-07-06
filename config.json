@@ -1,7 +1,7 @@
 {
-    "bpm": 80,
-    "synth_phrase_length": 16,
-    "drum_phrase_length": 16,
+    "bpm": 274,
+    "synth_phrase_length": 8,
+    "drum_phrase_length": 8,
     "drum_patterns": [
         [0,1,2,3,4,5,6,7],
         [0,1,2,3,4,2,3,4],
@@ -13,9 +13,9 @@
         [2,-1,2,-1,5,-1,5,-1]
     ],
     "repeat_patterns": true,
-    "include_silence": true,
-    "pattern_weight": 0,
-    "drum_bank": "stoner_rock",
+    "include_silence": false,
+    "pattern_weight": 1,
+    "drum_bank": "amen",
     "synth_bank": "default",
-    "warp_samples": false
+    "warp_samples": true
 }
