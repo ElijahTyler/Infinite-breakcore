@@ -1,5 +1,5 @@
 {
-    "bpm": 160,
+    "bpm": 144,
     "synth_phrase_length": 8,
     "drum_phrase_length": 8,
     "drum_patterns": [
@@ -13,9 +13,9 @@
         [2,-1,2,-1,5,-1,5,-1]
     ],
     "repeat_patterns": true,
-    "include_silence": false,
-    "pattern_weight": 1,
-    "drum_bank": "amen",
+    "include_silence": true,
+    "pattern_weight": 0.5,
+    "drum_bank": "weather_2x",
     "synth_bank": "default",
     "warp_samples": true
 }
